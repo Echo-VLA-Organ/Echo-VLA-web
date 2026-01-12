@@ -97,7 +97,7 @@
 
           <!-- ArXiv abstract Link -->
           <span class="link-block">
-            <a href="https://arxiv.org/pdf/2502.20742" target="_blank"
+            <a href="https://arxiv.org/abs/2511.18112" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
               <i class="ai ai-arxiv"></i>
@@ -153,21 +153,12 @@
             We introduce MoMani, an automated benchmark for mobile manipulation that generates expert-level long-horizon trajectories via MLLM-guided planning and feedback-based refinement. Compared with existing mobile manipulation benchmarks—which remain limited in scale and task diversity—as well as datasets like RoboTwin 2.0 and RoboCasa, MoMani offers richer task coverage and collects real-robot demonstrations on a holonomic mobile platform, providing a realistic and scalable testbed for embodied reasoning and control.
           </p>
         </div>
-        
-        <div class="columns is-centered">
-          <div class="column">
-            <img src="static/images/generate.png" alt="MoMani Generation Process" style="width: 100%; height: auto;">
-            <!-- <h3 class="subtitle has-text-centered">
-              Figure 1: The generation process of MoMani dataset. We employ MLLM-guided planning and feedback-driven refinement to create expert-level long-horizon trajectories.
-            </h3> -->
-          </div>
-        </div>
 
         <div class="columns is-centered">
           <div class="column">
-            <img src="static/images/datastatics.png" alt="MoMani Statistics" style="width: 100%; height: auto;">
+            <iframe src="static/pdfs/task_num.pdf" style="width: 100%; height: 600px; border: none;" type="application/pdf"></iframe>
             <!-- <h3 class="subtitle has-text-centered">
-              Figure 2: Statistics of MoMani dataset. The distribution shows the comprehensive coverage of tasks across different environments and complexity levels.
+              Statistics of MoMani dataset. The distribution shows the comprehensive coverage of tasks across different environments and complexity levels.
             </h3> -->
           </div>
         </div>
@@ -176,6 +167,72 @@
   </div>
 </section>
 <!-- End MoMani Section -->
+
+<!-- RoboCasa Simulation Results Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Simulation Results on RoboCasa</h2>
+        <div class="content has-text-justified">
+          <p>
+            EchoVLA demonstrates strong performance in simulated environments on RoboCasa, showcasing its ability to handle complex long-horizon mobile manipulation tasks through its dual memory system.
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column">
+            <iframe src="static/pdfs/demo1.pdf" style="width: 100%; height: 600px; border: none;" type="application/pdf"></iframe>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column">
+            <iframe src="static/pdfs/demo2 (1).pdf" style="width: 100%; height: 600px; border: none;" type="application/pdf"></iframe>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column">
+            <iframe src="static/pdfs/demo3 (1).pdf" style="width: 100%; height: 600px; border: none;" type="application/pdf"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End RoboCasa Simulation Results Section -->
+
+<!-- Real Robot Experiments Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real Robot Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            EchoVLA demonstrates robust performance on real-world robotic platforms, successfully completing complex long-horizon mobile manipulation tasks in physical environments. The following video showcases the model's capabilities on a real robot.
+          </p>
+        </div>
+        
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="publication-video">
+              <video controls style="width: 100%; height: auto; border-radius: 8px;">
+                <source src="static/videos/CloseMircowave.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Real Robot Experiments Section -->
+
+
+
 
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
