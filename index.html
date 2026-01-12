@@ -9,7 +9,7 @@
   <meta property="og:description" content="EchoVLA incorporates dual memory systems (scene memory and episodic memory) to enable consistent reasoning over extended task sequences in mobile manipulation."/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" /> -->
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -118,7 +118,7 @@
     <div class="hero-body">
       <img src="static/images/method.png" alt="Method Overview" style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered">
-        Our proposed Structured Preference Optimization framework for vision-language long-horizon task planning.
+        EchoVLA augments diffusion policies with dual memories, using coarse attention over scene memory and fine attention over episodic memory to provide context-aware action generation for long-horizon mobile manipulation.
       </h2>
     </div>
   </div>
@@ -133,7 +133,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Existing methods for vision-language task planning excel in short-horizon tasks but often fall short in complex, long-horizon planning within dynamic environments. These challenges primarily arise from the difficulty of effectively training models to produce high-quality reasoning processes for long-horizon tasks. To address this, we propose Structured Preference Optimization (SPO), which aims to enhance reasoning and action selection in long-horizon task planning through structured preference evaluation and optimized training strategies. Specifically, SPO introduces: 1) Preference-Based Scoring and Optimization, which systematically evaluates reasoning chains based on task relevance, visual grounding, and historical consistency; and 2) Curriculum-Guided Training, where the model progressively adapts from simple to complex tasks, improving its generalization ability in long-horizon scenarios and enhancing reasoning robustness. To advance research in vision-language long-horizon task planning, we introduce ExtendaBench, a comprehensive benchmark covering 1,509 tasks across VirtualHome and Habitat 2.0, categorized into ultra-short, short, medium, and long tasks. Experimental results demonstrate that SPO significantly improves reasoning quality and final decision accuracy, outperforming prior methods on long-horizon tasks and underscoring the effectiveness of preference-driven optimization in vision-language task planning. Specifically, SPO achieves a +5.98% GCR and +4.68% SR improvement in VirtualHome and a +3.30% GCR and +2.11% SR improvement in Habitat over the best-performing baselines.
+            Recent progress in Vision–Language–Action (VLA) models has enabled embodied agents to interpret multimodal instructions and perform complex tasks. However, existing VLAs are mostly confined to short-horizon, table-top manipulation, lacking the memory and reasoning capability required for long-horizon mobile manipulation, where agents must coordinate navigation and manipulation under changing spatial contexts. In this work, we present EchoVLA, a memory-aware VLA model for long-horizon mobile manipulation. EchoVLA incorporates a synergistic declarative memory inspired by the human brain, consisting of a scene memory that maintains a collection of spatial–semantic maps and an episodic memory that stores task-level experiences with multimodal contextual features. During both training and inference, the two memories are individually stored, updated, and retrieved based on current observations, task history, and instructions, and their retrieved representations are fused via coarse- and fine-grained attention to guide mobile–arm diffusion policies. To support large-scale training and evaluation, we further introduce MoMani, an automated benchmark that generates expert-level long-horizon trajectories through multimodal large language model (MLLM)–guided planning and feedback-driven refinement, supplemented with real-robot demonstrations. Comprehensive experiments in simulated and real-world environments demonstrate that EchoVLA substantially improves overall long-horizon performance, outperforming BC-T, DP3, WB-VIMA, and π₀.₅—achieving the highest success rates of 0.52 on manipulation/navigation tasks and 0.31 on mobile manipulation tasks, exceeding the strongest baseline (π₀.₅) by +0.08 and +0.11, respectively.
           </p>
         </div>
       </div>
@@ -142,32 +142,32 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- ExtendaBench Section -->
+<!-- MoMani Section -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">ExtendaBench: A Comprehensive Benchmark</h2>
+        <h2 class="title is-3">MoMani: Automated Benchmark for Mobile Manipulation</h2>
         <div class="content has-text-justified">
           <p>
-            To advance research in vision-language long-horizon task planning, we introduce ExtendaBench, a comprehensive benchmark covering 1,509 tasks across VirtualHome and Habitat 2.0. The tasks are categorized into ultra-short, short, medium, and long tasks, providing a diverse and challenging testbed for evaluating planning capabilities.
+            We introduce MoMani, an automated benchmark for mobile manipulation that generates expert-level long-horizon trajectories via MLLM-guided planning and feedback-based refinement. Compared with existing mobile manipulation benchmarks—which remain limited in scale and task diversity—as well as datasets like RoboTwin 2.0 and RoboCasa, MoMani offers richer task coverage and collects real-robot demonstrations on a holonomic mobile platform, providing a realistic and scalable testbed for embodied reasoning and control.
           </p>
         </div>
         
         <div class="columns is-centered">
           <div class="column">
-            <img src="static/images/generate.png" alt="ExtendaBench Generation Process" style="width: 100%; height: auto;">
+            <img src="static/images/generate.png" alt="MoMani Generation Process" style="width: 100%; height: auto;">
             <!-- <h3 class="subtitle has-text-centered">
-              Figure 1: The generation process of ExtendaBench dataset. We employ a systematic approach to create diverse and challenging tasks across different complexity levels.
+              Figure 1: The generation process of MoMani dataset. We employ MLLM-guided planning and feedback-driven refinement to create expert-level long-horizon trajectories.
             </h3> -->
           </div>
         </div>
 
         <div class="columns is-centered">
           <div class="column">
-            <img src="static/images/datastatics.png" alt="ExtendaBench Statistics" style="width: 100%; height: auto;">
+            <img src="static/images/datastatics.png" alt="MoMani Statistics" style="width: 100%; height: auto;">
             <!-- <h3 class="subtitle has-text-centered">
-              Figure 2: Statistics of ExtendaBench dataset. The distribution shows the comprehensive coverage of tasks across different environments and complexity levels.
+              Figure 2: Statistics of MoMani dataset. The distribution shows the comprehensive coverage of tasks across different environments and complexity levels.
             </h3> -->
           </div>
         </div>
@@ -175,7 +175,7 @@
     </div>
   </div>
 </section>
-<!-- End ExtendaBench Section -->
+<!-- End MoMani Section -->
 
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
@@ -297,14 +297,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{liang2025structuredpreferenceoptimizationvisionlanguage,
-        title={Structured Preference Optimization for Vision-Language Long-Horizon Task Planning}, 
-        author={Xiwen Liang and Min Lin and Weiqi Ruan and Rongtao Xu and Yuecheng Liu and Jiaqi Chen and Bingqian Lin and Yuzheng Zhuang and Xiaodan Liang},
+      <pre><code>@article{echovla2025,
+        title={EchoVLA: Robotic Vision-Language-Action Model with Synergistic Declarative Memory for Mobile Manipulation}, 
+        author={Anonymous CVPR Submission},
+        journal={CVPR},
         year={2025},
-        eprint={2502.20742},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2502.20742}, 
+        note={Anonymous CVPR submission}
   }</code></pre>
     </div>
 </section>
